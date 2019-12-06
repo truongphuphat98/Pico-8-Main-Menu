@@ -1,0 +1,8 @@
+-- initialize
+
+function _init()
+-- variable
+	scene="menu"
+	x=100
+	y=75	
+end

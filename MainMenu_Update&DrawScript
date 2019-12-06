@@ -1,0 +1,49 @@
+-- update & draw
+
+function _update()
+	if scene =="menu" then
+		update_menu()
+		elseif scene=="game" then
+		update_game()
+end
+	end
+
+function _draw()
+	if scene =="menu" then
+		draw_menu()
+		elseif scene=="game" then
+		draw_game()
+end
+	end
+
+-- draw
+function draw_menu()
+cls()
+print("press ❎ to start",30,63,250)
+end
+
+function draw_game()
+cls()
+spr(1,x,y)
+end
+
+-- update & inputs
+function update_menu()
+if btnp(❎) then
+	scene = "game"
+	sfx(0)
+end
+	end
+
+function update_game()
+if btnp(⬅️) then x-=10 end
+if btnp(➡️) then x+=10 end
+if btnp(⬆️) then y-=10 end
+if btnp(⬇️) then y+=10 end
+
+if btnp(❎) then
+scene="menu"
+end
+	end
+
+
